@@ -82,7 +82,13 @@ public class Question {
 
     @Override
     public String toString(){
-            return "Question: " + this.question + "\n";
+
+        return String.format("Type: %s \n" +
+                        "Difficulty: %s \n" +
+                        "Category: %s \n" +
+                        "Question: %s \n" +
+                        "Correct Answer: %s ",
+                this.type, this.difficulty, this.category, this.question, this.correct_answer);
     }
 }
 
