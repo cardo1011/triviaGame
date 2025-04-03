@@ -37,7 +37,6 @@ public class Question {
             this.question = question;
             this.correct_answer = correct_answer;
             this.incorrect_answers =  incorrect_answers.clone();
-
             }
 
     public String[] getShuffledAnswers() {
