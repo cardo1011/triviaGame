@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.commons.text.StringEscapeUtils;
 
 /**
  *
@@ -72,7 +73,7 @@ public class Question {
     }
 
     public String getQuestion() {
-        return question;
+        return decodeHTMLEntities(question);
     }
 
     public void setQuestion(String question) {
@@ -80,7 +81,7 @@ public class Question {
     }
 
     public String getCorrect_answer() {
-        return correct_answer;
+        return decodeHTMLEntities(correct_answer);
     }
 
     public void setCorrect_answer(String answer) {
@@ -88,6 +89,12 @@ public class Question {
     }
 
     public String[] getIncorrect_answers() {
+            //update each incorrect answer choice in order to decode each HTML entity contained in it
+            int i = 0;
+            for(String incorrect_answer: incorrect_answers){
+                incorrect_answers[i] = decodeHTMLEntities(incorrect_answer);
+                i++;
+            }
         return incorrect_answers;
     }
 
@@ -144,6 +151,13 @@ public class Question {
         }
         return arrayOfShuffledAnswers;
     }
+
+    public String decodeHTMLEntities(String str){
+            //When the JSON is parsed, there are still some code for symbols like "&" or letters with accents over them and
+            // so we have to use Apache library to decode the HMTL entities with the following code.
+            return StringEscapeUtils.unescapeHtml4(str);
+    }
+
 
 
     @Override

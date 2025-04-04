@@ -47,7 +47,7 @@ import java.net.http.HttpResponse;
          public HttpResponse<String> fetchQuestions() throws IOException, InterruptedException {
 
              //non-dynamic URL of the api used to get trivia questions from
-             String API_URL = "https://opentdb.com/api.php?amount=1&category=21&difficulty=easy&type=multiple";
+             String API_URL = "https://opentdb.com/api.php?amount=100&category=9&difficulty=easy&type=multiple";
 
              // Building a "GET" request.
              HttpRequest request = HttpRequest.newBuilder()

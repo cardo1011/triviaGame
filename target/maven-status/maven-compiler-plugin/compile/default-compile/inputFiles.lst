@@ -1,4 +1,6 @@
-/Users/ricardomunoz/IdeaProjects/triviaGame/src/main/java/triviaGame/ApiService.java
+/Users/ricardomunoz/IdeaProjects/triviaGame/src/main/java/triviaGame/ApiGet.java
+/Users/ricardomunoz/IdeaProjects/triviaGame/src/main/java/triviaGame/ApiResponse.java
+/Users/ricardomunoz/IdeaProjects/triviaGame/src/main/java/triviaGame/IncorrectAnswerTracker.java
 /Users/ricardomunoz/IdeaProjects/triviaGame/src/main/java/triviaGame/Main.java
 /Users/ricardomunoz/IdeaProjects/triviaGame/src/main/java/triviaGame/Question.java
 /Users/ricardomunoz/IdeaProjects/triviaGame/src/main/java/triviaGame/ScoreManager.java
